@@ -28,3 +28,15 @@ def step_impl(context, option):
 @when(u'I search "(?P<option>.*)" in the input')
 def step_impl(context, option):
     return context.current_page.text_value_in_the_filter(option)
+
+@when(u'I open the lateral menu')
+def step_impl(context):
+    return context.current_page.open_lateral_menu()
+
+@when(u'I click the "(?P<element_name>.*)" "(?P<element_type>label|button|a|div)" element')
+def step_impl(context, element_name, element_type):
+    element = transformation_helper(element_name, element_type)
+    if GeneralComponents.wait_until_element_is_clickable(
+            context, context.current_page.webElements.__dict__.get(element)
+    ):
+        return context.browser.find_element(context.current_page.webElements.__dict__.get(element)).click()

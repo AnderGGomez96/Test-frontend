@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from lib.pages.basepage import BasePage
 from lib.pages.homepage import HomePage
@@ -6,7 +7,7 @@ from lib.pages.homepage import HomePage
 
 def before_all(context):
     driver = set_selenium_driver(context)
-    driver.set_page_load_timeout('0.5')
+    driver.set_page_load_timeout('10')
     driver.maximize_window()
 
     context.web_driver = driver
@@ -63,7 +64,9 @@ def set_local_driver() -> webdriver:
     chrome_options.add_argument("--lang=en-US")
     chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
     chrome_options.add_experimental_option('useAutomationExtension', False)
-    return webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+
+    service = Service(ChromeDriverManager().install())
+    return webdriver.Chrome(service=service, options=chrome_options)
 
 
 def set_docker_driver() -> webdriver:

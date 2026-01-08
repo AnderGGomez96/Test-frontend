@@ -53,6 +53,11 @@ def step_impl(context, url):
     GeneralComponents.wait_until_url_is(context.browser, url)
     return assert_that(context.web_driver.current_url, equal_to(url))
 
+@then(u'The url page should contain the "(?P<url_part>.*)" url')
+def step_impl(context, url_part):
+    GeneralComponents.wait_until_url_contains(context.browser, url_part)
+    current_url = context.web_driver.current_url
+    return assert_that(url_part in current_url, equal_to(True))
 
 @then(u'The "(?P<element_name>.*)" "(?P<element_type>button)" "('u'?P<expression>should|should 'u'not)" be enabled')
 def step_impl(context, element_name, element_type, expression):

@@ -29,3 +29,9 @@ class HomePage(BasePage):
 
     def reload_page(self):
         return self.reload_page()
+    
+    def open_lateral_menu(self):
+        if GeneralComponents.wait_until_element_is_clickable(self.context, self.webElements.lateral_menu_button):
+            return self.web_driver.find_element(self.webElements.lateral_menu_button).click()
+        
+        
