@@ -25,15 +25,17 @@ Upgrading your `pip` by running:
 | ------ | ------ |
 | `$ python -m pip install --upgrade pip` | `C:> py -m pip install --upgrade pip` |
 
-## Running the project:
+## Installing Dependencies:
 
-To execute this project, you must first install the requirements file with the next command:
+Install the project dependencies using:
 
-`python3 -m pip install requirements.txt`
+`python3 -m pip install -r requirements.txt`
 
-Then of install all requirements you can execute the automated tests with the next command:
+## Running Tests:
 
-`behave --no-capture --format plain --tags={behave_tag} -Dcountry={coutry} -Dtestrail={testrail_report} -Ddriver={enviroment_to_run_tests}`
+Execute the automated tests with the following command:
+
+`behave --no-capture --format plain --tags={behave_tag} -Dcountry={country} -Dtestrail={testrail_report} -Ddriver={environment_to_run_tests}`
 ## Options
 
 | Parameter               | Options                                                                                                            |
