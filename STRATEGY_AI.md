@@ -46,16 +46,16 @@ Entregar todos los casos de una vez suele parecer más rápido, pero en QA la ve
 
 ## 1.3. Asistente AI utilizado:
 
-El asistente de inteligencia artificial utilizado es NoteBook LM que integra Gemini 3, NoteBook funciona como un sistema RAG que permite la recuperación de datos desde archivos cargados al cuaderno de trabajo, lo que permite reducir las alucinaciones de la inteligencia artificial y facilitan la auditoria de las respuestas ya que todo el contenido generado cita directamente las fuentes que le estamos cargando.
+El asistente de inteligencia artificial utilizado es NoteBook LM, que integra Gemini 3. NoteBook funciona como un sistema RAG que permite la recuperación de datos desde archivos cargados al cuaderno de trabajo, lo que permite reducir las alucinaciones de la inteligencia artificial y facilita la auditoría de las respuestas, ya que todo el contenido generado cita directamente las fuentes que le estamos cargando.
 
-Pasos para usar el Prompt.
+Pasos para usar el prompt.
 
-1. Cree un cuaderno en notebook.
-2. Carge el prompt como una fuente (Cree un archivo .md y cargue las instrucciones del prompt). Este prompt está configurado para trabajar con archivos que describan las funcionalidades, entonces debes cargar como fuente la "funcionalidad de vuelo" tambien en un archivo .md a parte.
+1. Crear un cuaderno en notebook.
+2. Cargue el prompt como una fuente (cree un archivo prompt.md y cargue las instrucciones del prompt). Este prompt está configurado para trabajar con archivos que describan las funcionalidades, entonces debes cargar como fuente la "funcionalidad de vuelo" también en un archivo .md aparte.
 3. Cargue la funcionalidad de vuelo como fuente.
 4. Realice la petición inicial.
 > " usuando como base la fuente "prompt.md" y De acuerdo al flujo "Flujo búsqueda de vuelos.md" realicemos el diseño de los casos de prueba"
-5. El asistente lo guiara por el paso a paso.
+5. El asistente lo guiará por el paso a paso.
 
 
 ## 1.4. Prompt
