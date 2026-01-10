@@ -35,7 +35,7 @@ Install the project dependencies using:
 
 Execute the automated tests with the following command:
 
-`behave --no-capture --format plain --tags={behave_tag} -Dcountry={country} -Dtestrail={testrail_report} -Ddriver={environment_to_run_tests}`
+`behave --no-capture --format plain  -Dcountry=co -Dtestrail={testrail_report} -Ddriver={environment_to_run_tests}`
 ## Options
 
 | Parameter               | Options                                                                                                            |
